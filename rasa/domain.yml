@@ -1,34 +1,45 @@
-version: "3.1"
-
+actions:
+- utter_greet
+- utter_goodbye
+- utter_deny
+- utter_affirm
+- utter_mood_great
+- utter_mood_unhappy
+- utter_iamabot
+- utter_nlu_fallback
+- action_generate_response_with_gpt2
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  utter_affirm:
+  - text: 好的，了解了~
+  - text: 好的，理解您的意思
+  utter_deny:
+  - text: 好的
+  - text: 请告诉我应该怎么做
+  - text: 请详细描述您的需求
   utter_goodbye:
-  - text: "Bye"
-
+  - text: 再见，祝您有美好的一天！
+  - text: 很期待与您的再次见面！
+  utter_greet:
+  - text: 您好，有什么我可以帮您的吗？
+  - text: 您好，有什么疑问吗
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+  - text: utter_iamabot response not defined in the database.
+  utter_mood_great:
+  - text: 很高兴能听到这样的回答
+  - text: 为您感到开心
+  utter_mood_unhappy:
+  - text: 请告诉我原因，我将尽可能为您提供帮助
+  - text: 有什么烦心事吗
+  utter_nlu_fallback:
+  - text: utter_nlu_fallback response not defined in the database.
 session_config:
-  session_expiration_time: 60
   carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+version: '3.1'

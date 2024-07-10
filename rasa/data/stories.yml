@@ -1,48 +1,26 @@
 stories:
 - steps:
-  - action: action_session_start
-  - action: action_listen
   - intent: greet
   - action: utter_greet
-  - action: action_listen
+  story: story_greet
+- steps:
   - intent: goodbye
   - action: utter_goodbye
-  - action: action_listen
-  - intent: nlu_fallback
-  - action: utter_happy
-  - action: action_listen
-  - intent: greet
-  - action: utter_greet
-  - action: action_listen
-  - intent: bot_challenge
-  - action: utter_iamabot
-  - action: action_listen
-  - intent: goodbye
-  - action: utter_goodbye
-  - action: action_listen
-  - intent: greet
-  - action: action_unlikely_intent
-  - action: utter_greet
-  - action: action_listen
+  story: story_goodbye
+- steps:
   - intent: affirm
-  - action: utter_happy
-  - action: action_listen
-  - action: action_session_start
-  - action: action_listen
-  - intent: greet
-  - action: utter_greet
-  - action: action_listen
-  - intent: greet
-  - action: action_unlikely_intent
-  - action: utter_greet
-  - action: action_listen
-  - intent: greet
-  - action: action_unlikely_intent
-  - action: utter_greet
-  - action: action_listen
-  - intent: greet
-  - action: action_unlikely_intent
-  - action: utter_greet
-  - action: action_listen
-  story: story_user
+  - action: utter_affirm
+  story: story_affirm
+- steps:
+  - intent: mood_great
+  - action: utter_mood_great
+  story: story_mood_great
+- steps:
+  - intent: mood_unhappy
+  - action: utter_mood_unhappy
+  story: story_mood_unhappy
+- steps:
+  - intent: deny
+  - action: utter_deny
+  story: story_deny
 version: '3.1'

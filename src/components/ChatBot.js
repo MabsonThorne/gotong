@@ -1,5 +1,3 @@
-// 文件路径：/home/ubuntu/gotong/src/components/ChatBot.js
-
 import React, { useEffect, useState, useRef } from 'react';
 import { TextField, Button, IconButton } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
@@ -197,3 +195,4 @@ const styles = {
 };
 
 export default ChatBot;
+

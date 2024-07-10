@@ -8,6 +8,7 @@ const contactsRoutes = require('./routes/contactsRoutes');
 const chatRoutes = require('./routes/chatRoutes');
 const statusRoutes = require('./routes/statusRoutes');
 const verificationRoutes = require('./routes/verificationRoutes');
+const ratingRoutes = require('./routes/ratingRoutes'); // 确保已引入ratingRoutes
 const cors = require('./middleware/cors');
 const errorHandler = require('./middleware/errorHandler');
 const bodyParser = require('body-parser');
@@ -28,10 +29,11 @@ app.use('/api', contactsRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api', statusRoutes);
 app.use('/api', verificationRoutes);
+app.use('/api', ratingRoutes); // 确保已使用ratingRoutes
 
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://106.52.158.123:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -165,3 +165,4 @@ Traceback (most recent call last):
   File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
   File "uvloop/loop.pyx", line 1790, in create_server
 OSError: [Errno 98] error while attempting to bind on address ('0.0.0.0', 5005): address already in use
+./rasa_server.sh: line 4: 117936 Killed                  rasa run --enable-api --cors "*"

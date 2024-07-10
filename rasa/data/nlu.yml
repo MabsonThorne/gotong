@@ -1,25 +1,30 @@
-version: "3.1"
-
 nlu:
-- intent: greet
-  examples: |
-    - 你好
-    - 嗨
-    - 早上好
-
-- intent: goodbye
-  examples: |
-    - 再见
-    - 拜拜
-    - 下次见
-
-responses:
-  utter_greet:
-    - text: "你好，我是你的智能客服，有什么可以帮您的吗？"
-    - text: "您好，有什么我可以帮您的吗？"
-  utter_goodbye:
-    - text: "再见，祝您有美好的一天！"
-    - text: "拜拜，期待您的下次光临！"
-  utter_affirm:
-    - text: "我的名字是智能客服小助手，很高兴为您服务。"
-    - text: "我住在云端，随时为您提供帮助。"
+- examples: '- 你好'
+  intent: greet
+- examples: '- 您好'
+  intent: greet
+- examples: '- 再见'
+  intent: goodbye
+- examples: '- NO'
+  intent: deny
+- examples: '- 是的'
+  intent: affirm
+- examples: '- 当然'
+  intent: affirm
+- examples: '- 不行'
+  intent: deny
+- examples: '- 我拒绝'
+  intent: deny
+- examples: '- 我很开心'
+  intent: mood_great
+- examples: '- 我不开心'
+  intent: mood_unhappy
+- examples: '- 拜拜'
+  intent: goodbye
+- examples: '- ？'
+  intent: deny
+- examples: '- 今天心情很好'
+  intent: mood_great
+- examples: '- 我很难受'
+  intent: mood_unhappy
+version: '3.1'
