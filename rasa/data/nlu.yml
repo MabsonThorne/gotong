@@ -25,6 +25,8 @@ nlu:
   intent: deny
 - examples: '- 今天心情很好'
   intent: mood_great
-- examples: '- 我很难受'
-  intent: mood_unhappy
+- examples: '- hello'
+  intent: greet
+- examples: '- hi'
+  intent: greet
 version: '3.1'

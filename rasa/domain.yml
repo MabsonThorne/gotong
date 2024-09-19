@@ -29,6 +29,7 @@ responses:
   utter_greet:
   - text: 您好，有什么我可以帮您的吗？
   - text: 您好，有什么疑问吗
+  - text: 您好，我是智能机器人GOTONG
   utter_iamabot:
   - text: utter_iamabot response not defined in the database.
   utter_mood_great:
